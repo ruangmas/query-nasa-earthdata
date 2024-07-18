@@ -24,5 +24,5 @@ for (i in 3:(length(date)-1)) {
   url<-paste0("https://sedac.ciesin.columbia.edu/downloads/data/aqdh/aqdh-o3-concentrations-contiguous-us-1-km-v1-10-2000-2016/", 
               datedf$datechar[i])
   response <- GET(url, write_disk(datedf$filename[i], overwrite = TRUE), progress(),
-                authenticate("truangmas1812", "FIRESAR00m#2207"), set_cookies("LC" = "cookies"))
+                authenticate("Username", "Password"), set_cookies("LC" = "cookies"))
 }
